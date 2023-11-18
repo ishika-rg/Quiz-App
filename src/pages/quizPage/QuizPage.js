@@ -29,12 +29,10 @@ const QuizPage = ({
   // console.log("questions in quiz page", questions);
 
   useEffect(() => {
-    // if(category && difficulty){
-    // fetchQuestions()
-
-    // }
+    
     if (questions.length != 0) {
-      // handleShuffle(questions)
+        // set random options
+
       setOptions(
         questions &&
           handleShuffle([
@@ -53,22 +51,7 @@ const QuizPage = ({
     // console.log("this is handle shuffle function");
     return ele.sort(() => Math.random() - 0.5);
   };
-  // useEffect(() => {
-  // set random options
-  // setOptions(
-  //   questions &&
-  //   handleShuffle([
-  //     questions[currQues]?.correct_answer,
-  //     ...questions[currQues]?.incorrect_answers
 
-  //   ])
-  // )
-
-  // }, [currQues, questions])
-
-  // handle shuffle function
-
-  // console.log("new options", options);
   return (
     <div className="quiz_container">
 
@@ -93,10 +76,7 @@ const QuizPage = ({
             options={options}
             correct={questions[currQues]?.correct_answer}
           />
-          {/* <p>questions displayed here ...</p>
-          {questions.map((ele) => (
-            <p>{ele.question}</p>
-          ))} */}
+
         </>
       ) : (
         <>
@@ -115,5 +95,3 @@ const QuizPage = ({
 
 export default QuizPage;
 
-// API : https://quizapi.io/api/v1/questions?apiKey=CdvJomhV4YCskll2KOkLriUdLo7zumE9WxyiRkS4&category=Docker
-// API KEY = CdvJomhV4YCskll2KOkLriUdLo7zumE9WxyiRkS4

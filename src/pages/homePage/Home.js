@@ -1,10 +1,8 @@
 import React from "react";
 import "./Home.css";
-
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Hero from "../../assests/hero.avif";
@@ -32,12 +30,9 @@ const Home = () => {
       toast.error("Please enter all details!");
     } else if (!mailformat.test(nmail)) {
       toast.error("Please enter valid email address!!");
-
-      // console.log("working")
     } else {
       toast.success("Successfully registered!!");
       // console.log(nmail)
-
       // console.log("registered mail :", nmail);
 
       setTimeout(() => {

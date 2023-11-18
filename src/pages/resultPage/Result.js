@@ -7,24 +7,21 @@ import { useNavigate } from "react-router-dom";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const Result = ({sc, setSc}) => {
-  const navigate = useNavigate()
+const Result = ({ sc, setSc }) => {
+  const navigate = useNavigate();
   const location = useLocation();
   const final_score = location.state.score;
   const user_name = location.state.user_name;
   // console.log(final_score);
-
-
 
   const corr = final_score;
   const incorrect = 10 - corr;
 
   const handleRestart = () => {
     // console.log(corr)
-    // set_score(0)
-    setSc(0)
-    navigate('/')
-    }
+    setSc(0);
+    navigate("/");
+  };
 
   return (
     <div className="result_container">
@@ -95,9 +92,9 @@ const Result = ({sc, setSc}) => {
         </div>
       </div>
 
-    <button className="restart_btn" onClick={handleRestart}>
-    Play Quiz
-  </button>
+      <button className="restart_btn" onClick={handleRestart}>
+        Play Quiz
+      </button>
     </div>
   );
 };
