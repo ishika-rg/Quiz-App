@@ -1,0 +1,86 @@
+.home{
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    margin : 5rem 2rem;
+    
+}
+
+.home .homeForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    width: 30%;
+    background-color: white;
+    /* margin : 2rem 0 ; */
+    padding : 3rem;
+    /* height : 30vh; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.homeForm label{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blacktext);
+}
+
+.homeForm input{
+border : 1px solid var(--bg-accent);
+padding : 10px;
+margin : 10px 0;
+border-radius: 5px;
+width : 100%;
+
+}
+
+.homeForm button {
+
+
+    width : 100px;
+    margin : 20px auto;
+    padding : 10px 0;
+    border: 1px solid var(--foreground);
+    border-radius: 5px;
+    background-color: var(--foreground);
+    cursor : pointer;
+    color : white;
+
+
+
+}
+
+.hero_img{
+    width  : 50%;
+
+}
+.hero_img img{
+    width : 90%;
+}
+
+/* responsive */
+@media (max-width : 768px){
+    .home{
+        display : flex;
+        flex-direction: column-reverse;
+        margin : 3rem 2rem;
+    }
+    
+    .home .homeForm{
+        padding : 1rem;
+        width : 80%;
+
+    }
+    .hero_img{
+        width : 80%;
+
+    }
+    .hero_img img{
+        width : 80%;
+
+    }
+
+
+}

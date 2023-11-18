@@ -1,0 +1,62 @@
+.container{
+    background-image: url('../../assests/quizBg.avif') ;
+    width : 100%;
+    min-height : 90vh;
+    /* min-height : 100vh; */
+    background-repeat: repeat;
+    padding-top: 30px;
+    /* min-height : calc(100vh - 90px); */
+}
+
+.info_container{
+    width : 50%;
+    background-color: white;
+    padding-top: 30px;
+    margin :  auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+
+.info_container h1{
+    color : var(--blacktext);
+    padding : 20px;
+    margin-top: 0;
+}
+.info_container form{
+    display: flex;
+    flex-direction: column;
+    padding : 2rem;
+
+}
+
+.info_container form label{
+    text-align: left;
+    padding-bottom: 10px;
+    color : var(--blacktext);
+
+}
+
+.info_container form select{
+    padding : 10px;
+    border: 1px solid var(--bg-accent);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.start{
+    width : 100px;
+    margin : 20px auto;
+    padding : 10px 0;
+    border: 1px solid var(--foreground);
+    border-radius: 5px;
+    background-color: var(--foreground);
+    cursor : pointer;
+    color : white;
+}
+
+@media (max-width : 768px) {
+
+.info_container{
+    width : 70%;
+}
+}
