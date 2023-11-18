@@ -69,11 +69,7 @@ const Question = ({
 
   }
   
-  // const handlePrevious = () => {
-  //   console.log("this is previous btn")
-  //   setCurrQues(currQues-1)
 
-  // }
   const handleQuit = () => {
     // console.log("quit button")
     setCurrQues(0)
