@@ -1,8 +1,9 @@
 .quiz_container {
-  background-color: bisque;
+  /* background-color: bisque; */
   min-height: 100vh;
   background-image: url("../../assests/quizBg.avif");
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 .quiz_container .heading {

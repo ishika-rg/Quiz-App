@@ -26,7 +26,7 @@ const Home = () => {
     e.preventDefault();
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if (userName == "") {
+    if (userName === "") {
       toast.error("Please enter all details!");
     } else if (!mailformat.test(nmail)) {
       toast.error("Please enter valid email address!!");
@@ -54,7 +54,7 @@ const Home = () => {
         </form>
 
         <div className="hero_img">
-          <img src={Hero} />
+          <img src={Hero} alt ="heroimg"/>
         </div>
       </div>
     </>

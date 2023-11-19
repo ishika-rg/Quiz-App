@@ -17,7 +17,6 @@ const Question = ({
 }) => {
   const navigate = useNavigate();
   const [selected, setSelected] = useState();
-  const [selectStyle, setSelectStyle] = useState("");
   const handleCheck = (i) => {
     // setSelected(i)
     setSelected(i);

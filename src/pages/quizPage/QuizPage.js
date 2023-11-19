@@ -19,8 +19,8 @@ const QuizPage = ({
   // console.log("category", location.state.category);
 
   const user_name = location.state.user_name;
-  const category = location.state.category;
-  const difficulty = location.state.difficulty;
+  // const category = location.state.category;
+  // const difficulty = location.state.difficulty;
 
   const [options, setOptions] = useState();
   const [currQues, setCurrQues] = useState(0);
@@ -30,7 +30,7 @@ const QuizPage = ({
 
   useEffect(() => {
     
-    if (questions.length != 0) {
+    if (questions.length !== 0) {
         // set random options
 
       setOptions(
@@ -58,7 +58,7 @@ const QuizPage = ({
       <Navbar user={<FaUserCircle />} user_name={user_name} />
 
       {
-      questions.length != 0 
+      questions.length !== 0 
        ? (
         <>
           <div className="quiz_header">
@@ -80,13 +80,28 @@ const QuizPage = ({
         </>
       ) : (
         <>
-          {/* <h1>Loading data...</h1> */}
+
           <LoadingIcons.Oval
             stroke="#000000"
             fill="#2e2e2e"
             width="400px"
             height="100px"
           />
+
+
+        {/* {
+          setTimeout(() => {
+        // navigate("/quiz", { state: { nmail } });
+        <LoadingIcons.Oval
+            stroke="#000000"
+            fill="#2e2e2e"
+            width="400px"
+            height="100px"
+          />
+      }, 10000)
+    } */}
+
+
         </>
       )}
     </div>
